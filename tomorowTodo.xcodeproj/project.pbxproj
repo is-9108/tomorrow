@@ -7,23 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D050905AC79142B4E494298F /* Pods_tomorowTodo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843DCC018596F311CFCC5448 /* Pods_tomorowTodo.framework */; };
 		E64BB87A24B3675A00E32C3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64BB87924B3675A00E32C3A /* AppDelegate.swift */; };
 		E64BB87C24B3675A00E32C3A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64BB87B24B3675A00E32C3A /* SceneDelegate.swift */; };
-		E64BB87E24B3675A00E32C3A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64BB87D24B3675A00E32C3A /* ViewController.swift */; };
 		E64BB88124B3675A00E32C3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E64BB87F24B3675A00E32C3A /* Main.storyboard */; };
 		E64BB88324B3675C00E32C3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E64BB88224B3675C00E32C3A /* Assets.xcassets */; };
 		E64BB88624B3675C00E32C3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E64BB88424B3675C00E32C3A /* LaunchScreen.storyboard */; };
+		E64BB88E24B367B800E32C3A /* todoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64BB88D24B367B800E32C3A /* todoViewController.swift */; };
+		E64BB89024B367D800E32C3A /* firstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64BB88F24B367D800E32C3A /* firstViewController.swift */; };
+		E64BB89224B367EA00E32C3A /* editViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64BB89124B367EA00E32C3A /* editViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		843DCC018596F311CFCC5448 /* Pods_tomorowTodo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tomorowTodo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		97E00F2BAEF1A711A5E08B8C /* Pods-tomorowTodo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tomorowTodo.debug.xcconfig"; path = "Target Support Files/Pods-tomorowTodo/Pods-tomorowTodo.debug.xcconfig"; sourceTree = "<group>"; };
 		E64BB87624B3675A00E32C3A /* tomorowTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tomorowTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E64BB87924B3675A00E32C3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E64BB87B24B3675A00E32C3A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E64BB87D24B3675A00E32C3A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E64BB88024B3675A00E32C3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E64BB88224B3675C00E32C3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E64BB88524B3675C00E32C3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E64BB88724B3675C00E32C3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E64BB88D24B367B800E32C3A /* todoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todoViewController.swift; sourceTree = "<group>"; };
+		E64BB88F24B367D800E32C3A /* firstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstViewController.swift; sourceTree = "<group>"; };
+		E64BB89124B367EA00E32C3A /* editViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editViewController.swift; sourceTree = "<group>"; };
+		F3ED24113695BC36757599C2 /* Pods-tomorowTodo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tomorowTodo.release.xcconfig"; path = "Target Support Files/Pods-tomorowTodo/Pods-tomorowTodo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +39,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D050905AC79142B4E494298F /* Pods_tomorowTodo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5457DBF0D7CCC6BD6DDE543A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				97E00F2BAEF1A711A5E08B8C /* Pods-tomorowTodo.debug.xcconfig */,
+				F3ED24113695BC36757599C2 /* Pods-tomorowTodo.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E64BB86D24B3675A00E32C3A = {
 			isa = PBXGroup;
 			children = (
 				E64BB87824B3675A00E32C3A /* tomorowTodo */,
 				E64BB87724B3675A00E32C3A /* Products */,
+				5457DBF0D7CCC6BD6DDE543A /* Pods */,
+				FBC934629172731B1CB97E20 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +79,23 @@
 			children = (
 				E64BB87924B3675A00E32C3A /* AppDelegate.swift */,
 				E64BB87B24B3675A00E32C3A /* SceneDelegate.swift */,
-				E64BB87D24B3675A00E32C3A /* ViewController.swift */,
 				E64BB87F24B3675A00E32C3A /* Main.storyboard */,
+				E64BB88F24B367D800E32C3A /* firstViewController.swift */,
+				E64BB88D24B367B800E32C3A /* todoViewController.swift */,
+				E64BB89124B367EA00E32C3A /* editViewController.swift */,
 				E64BB88224B3675C00E32C3A /* Assets.xcassets */,
 				E64BB88424B3675C00E32C3A /* LaunchScreen.storyboard */,
 				E64BB88724B3675C00E32C3A /* Info.plist */,
 			);
 			path = tomorowTodo;
+			sourceTree = "<group>";
+		};
+		FBC934629172731B1CB97E20 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				843DCC018596F311CFCC5448 /* Pods_tomorowTodo.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +105,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E64BB88A24B3675C00E32C3A /* Build configuration list for PBXNativeTarget "tomorowTodo" */;
 			buildPhases = (
+				B439B039DC9AEC05369C1D7E /* [CP] Check Pods Manifest.lock */,
 				E64BB87224B3675A00E32C3A /* Sources */,
 				E64BB87324B3675A00E32C3A /* Frameworks */,
 				E64BB87424B3675A00E32C3A /* Resources */,
+				5B193EC52C460E286AB0BE35 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +166,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5B193EC52C460E286AB0BE35 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-tomorowTodo/Pods-tomorowTodo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-tomorowTodo/Pods-tomorowTodo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-tomorowTodo/Pods-tomorowTodo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B439B039DC9AEC05369C1D7E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-tomorowTodo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E64BB87224B3675A00E32C3A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E64BB87E24B3675A00E32C3A /* ViewController.swift in Sources */,
+				E64BB88E24B367B800E32C3A /* todoViewController.swift in Sources */,
 				E64BB87A24B3675A00E32C3A /* AppDelegate.swift in Sources */,
 				E64BB87C24B3675A00E32C3A /* SceneDelegate.swift in Sources */,
+				E64BB89224B367EA00E32C3A /* editViewController.swift in Sources */,
+				E64BB89024B367D800E32C3A /* firstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +359,7 @@
 		};
 		E64BB88B24B3675C00E32C3A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97E00F2BAEF1A711A5E08B8C /* Pods-tomorowTodo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -294,12 +372,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = is.tomorowTodo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		E64BB88C24B3675C00E32C3A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3ED24113695BC36757599C2 /* Pods-tomorowTodo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -312,7 +391,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = is.tomorowTodo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
