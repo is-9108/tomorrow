@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,7 @@
 		E64BB88E24B367B800E32C3A /* todoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64BB88D24B367B800E32C3A /* todoViewController.swift */; };
 		E64BB89024B367D800E32C3A /* firstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64BB88F24B367D800E32C3A /* firstViewController.swift */; };
 		E64BB89224B367EA00E32C3A /* editViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64BB89124B367EA00E32C3A /* editViewController.swift */; };
+		E674858A24B5B7C90078D4DA /* addViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E674858924B5B7C90078D4DA /* addViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		E64BB88D24B367B800E32C3A /* todoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todoViewController.swift; sourceTree = "<group>"; };
 		E64BB88F24B367D800E32C3A /* firstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstViewController.swift; sourceTree = "<group>"; };
 		E64BB89124B367EA00E32C3A /* editViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editViewController.swift; sourceTree = "<group>"; };
+		E674858924B5B7C90078D4DA /* addViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addViewController.swift; sourceTree = "<group>"; };
 		F3ED24113695BC36757599C2 /* Pods-tomorowTodo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tomorowTodo.release.xcconfig"; path = "Target Support Files/Pods-tomorowTodo/Pods-tomorowTodo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -52,7 +54,6 @@
 				97E00F2BAEF1A711A5E08B8C /* Pods-tomorowTodo.debug.xcconfig */,
 				F3ED24113695BC36757599C2 /* Pods-tomorowTodo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,6 +82,7 @@
 				E64BB87B24B3675A00E32C3A /* SceneDelegate.swift */,
 				E64BB87F24B3675A00E32C3A /* Main.storyboard */,
 				E64BB88F24B367D800E32C3A /* firstViewController.swift */,
+				E674858924B5B7C90078D4DA /* addViewController.swift */,
 				E64BB88D24B367B800E32C3A /* todoViewController.swift */,
 				E64BB89124B367EA00E32C3A /* editViewController.swift */,
 				E64BB88224B3675C00E32C3A /* Assets.xcassets */,
@@ -217,6 +219,7 @@
 				E64BB87A24B3675A00E32C3A /* AppDelegate.swift in Sources */,
 				E64BB87C24B3675A00E32C3A /* SceneDelegate.swift in Sources */,
 				E64BB89224B367EA00E32C3A /* editViewController.swift in Sources */,
+				E674858A24B5B7C90078D4DA /* addViewController.swift in Sources */,
 				E64BB89024B367D800E32C3A /* firstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
