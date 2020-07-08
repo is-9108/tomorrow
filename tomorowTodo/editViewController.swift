@@ -24,5 +24,7 @@ class editViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     @IBAction func edit(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+        print("test")
     }
 }
