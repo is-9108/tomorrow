@@ -66,6 +66,7 @@ class addViewController: UIViewController,UITextFieldDelegate,UIPickerViewDelega
             }
             self.realm.add(self.task,update: .modified)
         }
+        print(task as Any)
         dismiss(animated: true, completion: nil)
     }
     

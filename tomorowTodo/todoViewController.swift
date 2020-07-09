@@ -36,6 +36,19 @@ class todoViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         return cell
     }
     
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            try! realm.write{
+                self.realm.delete(self.taskArray[indexPath.row])
+                todoTableView.deleteRows(at: [indexPath], with: .fade)
+            }
+        }
+    }
+    
     @IBAction func add(_ sender: Any) {
         let addViewController = self.storyboard?.instantiateViewController(withIdentifier: "addViewController") as! addViewController
         
