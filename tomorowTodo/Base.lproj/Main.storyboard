@@ -115,7 +115,7 @@
                                 <rect key="frame" x="0.0" y="104" width="375" height="503"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="zd4-gh-vD8">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="60" id="zd4-gh-vD8">
                                         <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zd4-gh-vD8" id="FBI-aj-izm">
@@ -136,7 +136,7 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="cvj-a9-Ifd">
                                             <connections>
-                                                <segue destination="qWJ-QT-x6w" kind="modal" id="Jbf-sO-1G1"/>
+                                                <action selector="add:" destination="Kkx-6L-44E" id="6CK-LT-9Cb"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -163,6 +163,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="todo" image="doc.text" catalog="system" id="GYP-pC-QHa"/>
                     <navigationItem key="navigationItem" id="0Kr-Hm-2ri"/>
+                    <connections>
+                        <outlet property="todoTableView" destination="6vk-Fx-ZSt" id="Z6I-dW-tSD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KDk-Qc-k2n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
