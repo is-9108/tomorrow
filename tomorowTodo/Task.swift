@@ -1,10 +1,4 @@
-//
-//  Task.swift
-//  tomorowTodo
-//
-//  Created by Shota Ishii on 2020/07/09.
-//  Copyright © 2020 is. All rights reserved.
-//
+
 
 import Foundation
 import RealmSwift
