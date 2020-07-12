@@ -16,8 +16,8 @@ class editViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
+        
+        
     }
     
     @IBAction func back(_ sender: Any) {
