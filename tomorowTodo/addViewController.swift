@@ -12,7 +12,8 @@ import RealmSwift
 class addViewController: UIViewController,UITextFieldDelegate,UIPickerViewDelegate,UIPickerViewDataSource {
     
     
-
+    @IBOutlet weak var deadlineDP: UIDatePicker!
+    
     @IBOutlet weak var todoTextField: UITextField!
     
     @IBOutlet weak var randPicker: UIPickerView!
@@ -48,13 +49,17 @@ class addViewController: UIViewController,UITextFieldDelegate,UIPickerViewDelega
         rankString = rank[row]
     }
     
-    
-    
+    func setNotification(task:Task){
+        let content = UNMutableNotificationContent()
+       
+    }
+        
     @IBAction func add(_ sender: Any) {
         print(todoTextField.text!)
         print(rankString)
         try! realm.write{
             self.task.title = self.todoTextField.text!
+            self.task.deadline = deadlineDP.date
             if rankString == "高"{
                 self.task.rank = 1
             }else if rankString == "中"{
