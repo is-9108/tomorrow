@@ -51,7 +51,28 @@ class addViewController: UIViewController,UITextFieldDelegate,UIPickerViewDelega
     
     func setNotification(task:Task){
         let content = UNMutableNotificationContent()
-       
+        content.title = "期限が迫っています！！"
+        content.body = "\(task.title)の期限が迫っています！！"
+        content.sound = UNNotificationSound.default
+        
+        let calendar = Calendar.current
+        let dateComponents = calendar.dateComponents([.year,.month,.day,.hour,.minute], from: task.deadline)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
+        
+        let request = UNNotificationRequest(identifier: String(task.id), content: content, trigger: trigger)
+        
+        let center = UNUserNotificationCenter.current()
+        center.add(request){(error) in
+            print(error ?? "ローカル通知登録OK")
+        }
+        
+        center.getPendingNotificationRequests{(requests: [UNNotificationRequest]) in
+            for request in requests{
+                print("------------")
+                print(request)
+                print("------------")
+            }
+        }
     }
         
     @IBAction func add(_ sender: Any) {
