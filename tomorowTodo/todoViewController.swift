@@ -2,7 +2,7 @@
 
 import UIKit
 import RealmSwift
-
+import UserNotifications
 
 class todoViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
@@ -42,9 +42,20 @@ class todoViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete{
+            let task = taskArray[indexPath.row]
+            let center = UNUserNotificationCenter.current()
+            center.removePendingNotificationRequests(withIdentifiers: [String(task.id)])
             try! realm.write{
-                self.realm.delete(self.taskArray[indexPath.row])
+                self.realm.delete(task)
                 todoTableView.deleteRows(at: [indexPath], with: .fade)
+            }
+            
+            center.getPendingNotificationRequests{(requests: [UNNotificationRequest]) in
+                for request in requests{
+                print("------------")
+                print(request)
+                print("------------")
+                }
             }
         }
     }
