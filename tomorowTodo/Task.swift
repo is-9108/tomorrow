@@ -13,6 +13,8 @@ class Task:Object{
     
     @objc dynamic var deadline: Date = Date()
     
+    @objc dynamic var timeString: String = ""
+    
     override static func primaryKey() -> String? {
         return "id"
     }

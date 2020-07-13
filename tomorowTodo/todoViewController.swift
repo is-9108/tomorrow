@@ -32,7 +32,7 @@ class todoViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
         let task = taskArray[indexPath.row]
         cell.textLabel?.text = task.title
-        
+        cell.detailTextLabel?.text = task.timeString
         return cell
     }
     

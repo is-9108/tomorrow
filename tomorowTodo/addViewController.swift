@@ -81,6 +81,9 @@ class addViewController: UIViewController,UITextFieldDelegate,UIPickerViewDelega
         try! realm.write{
             self.task.title = self.todoTextField.text!
             self.task.deadline = deadlineDP.date
+            let formatter = DateFormatter()
+            formatter.dateFormat = "MM/dd"
+            self.task.timeString = "期限：\(formatter.string(from: deadlineDP.date))"
             if rankString == "高"{
                 self.task.rank = 1
             }else if rankString == "中"{
