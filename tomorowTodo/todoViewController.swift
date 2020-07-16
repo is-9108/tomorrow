@@ -16,23 +16,27 @@ class todoViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         super.viewDidLoad()
         todoTableView.delegate = self
         todoTableView.dataSource = self
+        
+        let nib = UINib(nibName: "TableViewCell", bundle: nil)
+        todoTableView.register(nib, forCellReuseIdentifier: "Cell")
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         todoTableView.reloadData()
     }
+
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return taskArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = todoTableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        
-        let task = taskArray[indexPath.row]
-        cell.textLabel?.text = task.title
-        cell.detailTextLabel?.text = task.timeString
+
+        let cell = todoTableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TableViewCell
+        cell.setCell(task: taskArray[indexPath.row])
         return cell
     }
     
