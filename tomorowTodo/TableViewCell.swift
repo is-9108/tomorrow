@@ -16,6 +16,8 @@ class TableViewCell: UITableViewCell {
     
     @IBOutlet weak var checkBox: UIButton!
     
+    var task:Task!
+    
     var done: Bool = true
     
     func setCell(task:Task){

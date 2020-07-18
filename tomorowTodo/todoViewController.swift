@@ -8,6 +8,8 @@ class todoViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 
     @IBOutlet weak var todoTableView: UITableView!
     
+    @IBOutlet weak var addButton: UIButton!
+    
     let realm = try! Realm()
     
     var taskArray = try! Realm().objects(Task.self).sorted(byKeyPath: "rank",ascending: true)
@@ -20,6 +22,13 @@ class todoViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         let nib = UINib(nibName: "TableViewCell", bundle: nil)
         todoTableView.register(nib, forCellReuseIdentifier: "Cell")
         
+        let rgba = UIColor(red: 0, green: 0, blue: 255, alpha: 1.0)
+        addButton.backgroundColor = rgba
+        addButton.layer.borderWidth = 1.0
+        addButton.layer.borderColor = UIColor.blue.cgColor
+        addButton.layer.cornerRadius = 25.0
+        addButton.layer.masksToBounds = true
+        addButton.setTitleColor(.white, for: .normal)
         
     }
     
@@ -66,23 +75,23 @@ class todoViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     @IBAction func add(_ sender: Any) {
         let addViewController = self.storyboard?.instantiateViewController(withIdentifier: "addViewController") as! addViewController
-        
-        
-        let task = Task()
-        
-        let allTask = realm.objects(Task.self)
-        if allTask.count != 0{
-            task.id = allTask.max(ofProperty: "id")! + 1
-            print("+1")
-        }else{
-            print("no")
-        }
-        print(realm)
-        print(taskArray)
-        addViewController.task = task
-        self.present(addViewController,animated: true,completion: nil)
-        
+               
+               
+               let task = Task()
+               
+               let allTask = realm.objects(Task.self)
+               if allTask.count != 0{
+                   task.id = allTask.max(ofProperty: "id")! + 1
+                   print("+1")
+               }else{
+                   print("no")
+               }
+               print(realm)
+               print(taskArray)
+               addViewController.task = task
+               self.present(addViewController,animated: true,completion: nil)
     }
+
     
 
 }

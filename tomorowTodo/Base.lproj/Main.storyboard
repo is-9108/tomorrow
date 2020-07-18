@@ -38,14 +38,26 @@
                                                 <segue destination="tf5-zI-15J" kind="modal" id="Oti-hs-tdd"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="cvj-a9-Ifd">
-                                            <connections>
-                                                <action selector="add:" destination="Kkx-6L-44E" id="6CK-LT-9Cb"/>
-                                            </connections>
-                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="cvj-a9-Ifd"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Sh-6g-kqf">
+                                <rect key="frame" x="302" y="584" width="50" height="50"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="09y-AM-p5w"/>
+                                    <constraint firstAttribute="width" constant="50" id="EgM-bs-YAa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="+">
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="add:" destination="Kkx-6L-44E" eventType="touchUpInside" id="aNK-BM-qFB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -53,6 +65,8 @@
                             <constraint firstItem="Kvp-RO-QXn" firstAttribute="trailing" secondItem="6vk-Fx-ZSt" secondAttribute="trailing" id="LoI-R3-sUk"/>
                             <constraint firstItem="6vk-Fx-ZSt" firstAttribute="top" secondItem="bsi-12-f07" secondAttribute="bottom" id="MaM-bx-iAD"/>
                             <constraint firstItem="bsi-12-f07" firstAttribute="leading" secondItem="Kvp-RO-QXn" secondAttribute="leading" id="OGD-OB-vIs"/>
+                            <constraint firstItem="Kvp-RO-QXn" firstAttribute="trailing" secondItem="0Sh-6g-kqf" secondAttribute="trailing" constant="23" id="PrB-fE-iU3"/>
+                            <constraint firstItem="Kvp-RO-QXn" firstAttribute="bottom" secondItem="0Sh-6g-kqf" secondAttribute="bottom" constant="33" id="VFl-if-D3X"/>
                             <constraint firstItem="Kvp-RO-QXn" firstAttribute="bottom" secondItem="6vk-Fx-ZSt" secondAttribute="bottom" id="YPG-aZ-WMm"/>
                             <constraint firstItem="bsi-12-f07" firstAttribute="top" secondItem="Kvp-RO-QXn" secondAttribute="top" id="dU1-7o-yzP"/>
                             <constraint firstItem="6vk-Fx-ZSt" firstAttribute="leading" secondItem="Kvp-RO-QXn" secondAttribute="leading" id="qja-KX-CNU"/>
@@ -62,6 +76,7 @@
                     <tabBarItem key="tabBarItem" title="todo" image="doc.text" catalog="system" id="GYP-pC-QHa"/>
                     <navigationItem key="navigationItem" id="0Kr-Hm-2ri"/>
                     <connections>
+                        <outlet property="addButton" destination="0Sh-6g-kqf" id="dwN-R8-Pk9"/>
                         <outlet property="todoTableView" destination="6vk-Fx-ZSt" id="Z6I-dW-tSD"/>
                     </connections>
                 </viewController>
@@ -160,7 +175,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="alE-Ms-5vI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1610.4000000000001" y="834.33283358320841"/>
+            <point key="canvasLocation" x="2362" y="109"/>
         </scene>
         <!--設定-->
         <scene sceneID="8j8-Jq-GOE">
@@ -195,7 +210,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wgg-9W-6DY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2461" y="110"/>
+            <point key="canvasLocation" x="849" y="108"/>
         </scene>
     </scenes>
     <resources>
